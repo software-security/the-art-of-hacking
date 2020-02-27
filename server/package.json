@@ -1,0 +1,27 @@
+{
+  "name": "the-art-of-hacking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/software-security/the-art-of-hacking.git"
+  },
+  "author": "erinwilhjelm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/software-security/the-art-of-hacking/issues"
+  },
+  "homepage": "https://github.com/software-security/the-art-of-hacking#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
