@@ -1,4 +1,5 @@
 const express = require('express');
+const login = require('./routes/login');
 
 
 //require mysql in node modules to use it
@@ -8,6 +9,8 @@ const mysql = require('mysql');
 const port = process.env.PORT || 5000;
 
 const app = express();
+
+const router = express.Router();
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -22,9 +25,17 @@ connection.connect(function(err){
 
 });
 
-exports.log
 
 require('./routes/html-routes')(app,connection);
+
+// test route
+router.get('/', function(req, res) {
+    res.json({ message: 'welcome to our upload module apis' });
+});
+
+router.post('/login', login.login);
+
+
 
 app.listen(port, () => {
 console.log(`Server now running on port ${port}!`)
